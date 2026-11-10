@@ -1,6 +1,6 @@
 {
   "id": "github",
-  "title": "DevOps - GitHub",
+  "title": "GitHub",
   "heading": "Git, GitHub i automatyczna publikacja",
   "subtitle": "Repozytorium · GitHub Actions · GitHub Pages · komendy z opisami",
   "notice": "WAŻNE: GitHub Pages publikuje stronę publicznie. Nie umieszczaj w plikach JSON, HTML i Git haseł, tokenów, kluczy ani danych poufnych. Polecenia zawierają przykładowe nazwy i adresy.",

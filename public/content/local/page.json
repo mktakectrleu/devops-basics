@@ -1,6 +1,6 @@
 {
   "id": "local",
-  "title": "local",
+  "title": "Local",
   "heading": "WSL2 + Docker + DDEV + Composer + Drush",
   "subtitle": "Podręczna instrukcja · Drupal 7 i Drupal 11 · komendy z objaśnieniami",
   "notice": "Polecenia zawierające przykładowe nazwy repozytoriów, plików i ścieżek wymagają dostosowania. Import bazy i przywrócenie snapshotu mogą nadpisać dane.",
