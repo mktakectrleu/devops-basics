@@ -1,0 +1,55 @@
+{
+  "id": "github-01",
+  "title": "01 · Git i konto GitHub",
+  "summary": "Podstawowe polecenia w Ubuntu WSL2; zamień NAZWA_UZYTKOWNIKA na swój login GitHub.",
+  "subsections": [
+    {
+      "id": "przygotowanie",
+      "title": "Sprawdzenie i konfiguracja Git",
+      "commands": [
+        {
+          "command": "git --version",
+          "description": "Sprawdza, czy Git jest zainstalowany."
+        },
+        {
+          "command": "git config --global user.name \"Twoje imię i nazwisko\"",
+          "description": "Ustawia podpis autora commitów."
+        },
+        {
+          "command": "git config --global user.email \"twoj-email@example.com\"",
+          "description": "Ustawia adres autora commitów (najlepiej zweryfikowany na GitHub)."
+        },
+        {
+          "command": "git config --global --list",
+          "description": "Wyświetla aktywną konfigurację Git."
+        },
+        {
+          "command": "git status",
+          "description": "Pokazuje zmiany w bieżącym repozytorium."
+        }
+      ]
+    },
+    {
+      "id": "gh",
+      "title": "GitHub CLI (opcjonalnie)",
+      "commands": [
+        {
+          "command": "gh --version",
+          "description": "Sprawdza, czy GitHub CLI jest dostępny."
+        },
+        {
+          "command": "gh auth login",
+          "description": "Uruchamia logowanie do GitHub; wybierz GitHub.com, HTTPS i logowanie przeglądarką."
+        },
+        {
+          "command": "gh auth status",
+          "description": "Sprawdza, na jakie konto zalogowano GitHub CLI."
+        },
+        {
+          "command": "gh repo create devops-basics --public --source=. --remote=origin --push",
+          "description": "Tworzy publiczne repozytorium i wysyła aktualną gałąź; wykonaj po pierwszym commicie, tylko jeżeli repo jeszcze nie istnieje."
+        }
+      ]
+    }
+  ]
+}

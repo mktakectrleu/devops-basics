@@ -1,0 +1,63 @@
+{
+  "id": "github-03",
+  "title": "03 · Codzienna praca i gałęzie",
+  "summary": "Zmiany w plikach JSON można zatwierdzać bez dotykania HTML/JS/CSS.",
+  "subsections": [
+    {
+      "id": "regularnie",
+      "title": "Commit i synchronizacja",
+      "commands": [
+        {
+          "command": "git status",
+          "description": "Pokazuje zmodyfikowane i nieśledzone pliki."
+        },
+        {
+          "command": "git diff",
+          "description": "Wyświetla niezapisane w commicie zmiany."
+        },
+        {
+          "command": "git add public/content/",
+          "description": "Dodaje zmiany w dokumentacji JSON."
+        },
+        {
+          "command": "git commit -m \"Aktualizacja instrukcji DDEV\"",
+          "description": "Zapisuje aktualizację dokumentacji."
+        },
+        {
+          "command": "git pull --ff-only",
+          "description": "Pobiera zmiany z GitHub bez tworzenia automatycznego merge commita."
+        },
+        {
+          "command": "git push",
+          "description": "Wysyła zmiany i uruchamia pipeline."
+        },
+        {
+          "command": "git log --oneline -8",
+          "description": "Pokazuje osiem ostatnich commitów."
+        }
+      ]
+    },
+    {
+      "id": "branch",
+      "title": "Bezpieczne zmiany przez pull request",
+      "commands": [
+        {
+          "command": "git switch -c docs/nowa-sekcja",
+          "description": "Tworzy gałąź roboczą i przełącza na nią."
+        },
+        {
+          "command": "git push -u origin docs/nowa-sekcja",
+          "description": "Publikuje gałąź roboczą; następnie utwórz Pull Request w GitHub."
+        },
+        {
+          "command": "git switch main",
+          "description": "Wraca na gałąź główną."
+        },
+        {
+          "command": "git pull --ff-only",
+          "description": "Aktualizuje main po zaakceptowanym Pull Request."
+        }
+      ]
+    }
+  ]
+}

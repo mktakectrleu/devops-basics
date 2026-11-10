@@ -1,0 +1,19 @@
+{
+  "id": "lokalnie",
+  "title": "DevOps - lokalnie",
+  "heading": "WSL2 + Docker + DDEV + Composer + Drush",
+  "subtitle": "Podręczna instrukcja · Drupal 7 i Drupal 11 · komendy z objaśnieniami",
+  "notice": "Polecenia zawierające przykładowe nazwy repozytoriów, plików i ścieżek wymagają dostosowania. Import bazy i przywrócenie snapshotu mogą nadpisać dane.",
+  "sections": [
+    "sections/sekcja-01.json",
+    "sections/sekcja-02.json",
+    "sections/sekcja-03.json",
+    "sections/sekcja-04.json",
+    "sections/sekcja-05.json",
+    "sections/sekcja-06.json",
+    "sections/sekcja-07.json",
+    "sections/sekcja-08.json",
+    "sections/sekcja-09.json",
+    "sections/sekcja-10.json"
+  ]
+}

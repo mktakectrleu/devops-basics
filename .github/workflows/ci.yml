@@ -1,0 +1,27 @@
+name: Kontrola jakości
+
+on:
+  pull_request:
+  push:
+    branches-ignore:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pobierz kod
+        uses: actions/checkout@v4
+      - name: Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Sprawdź JSON i strukturę
+        run: python3 scripts/validate.py
+      - name: Testy automatyczne
+        run: python3 -m unittest discover -s tests -v
+      - name: Zbuduj stronę
+        run: python3 scripts/build.py

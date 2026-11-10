@@ -1,0 +1,57 @@
+{
+  "id": "sekcja-03",
+  "title": "03 · DDEV — codzienna obsługa",
+  "summary": "Polecenia projektu wykonuj z jego katalogu. DDEV nie zastępuje Dockera — zarządza kontenerami projektu.",
+  "subsections": [
+    {
+      "id": "grupa-01",
+      "title": "DDEV / Ubuntu",
+      "commands": [
+        {
+          "command": "ddev version",
+          "description": "Pokazuje wersje DDEV i powiązanych komponentów."
+        },
+        {
+          "command": "ddev list",
+          "description": "Wyświetla znane projekty DDEV i ich stan."
+        },
+        {
+          "command": "ddev start",
+          "description": "Uruchamia kontenery bieżącego projektu."
+        },
+        {
+          "command": "ddev stop",
+          "description": "Zatrzymuje kontenery bieżącego projektu."
+        },
+        {
+          "command": "ddev restart",
+          "description": "Restartuje kontenery projektu po zmianach konfiguracji."
+        },
+        {
+          "command": "ddev describe",
+          "description": "Pokazuje adres URL, wersje usług i parametry projektu."
+        },
+        {
+          "command": "ddev launch",
+          "description": "Otwiera witrynę projektu w przeglądarce."
+        },
+        {
+          "command": "ddev ssh",
+          "description": "Otwiera powłokę wewnątrz kontenera WWW."
+        },
+        {
+          "command": "ddev logs -s web",
+          "description": "Pokazuje logi kontenera WWW/PHP."
+        },
+        {
+          "command": "ddev exec php -v",
+          "description": "Odczytuje wersję PHP wewnątrz kontenera."
+        },
+        {
+          "command": "ddev poweroff",
+          "description": "Zatrzymuje wszystkie projekty DDEV i współdzielone usługi."
+        }
+      ]
+    }
+  ]
+}

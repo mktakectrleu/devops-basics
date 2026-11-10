@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="DevOps Basics: WSL2, Docker, DDEV, Drupal 7/11, Git i GitHub Pages. Komendy z opisami i wyszukiwarką.">
+  <title>DevOps Basics</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="persistent-header" id="persistent-header">
+  <div class="topbar">
+    <div class="topbar-inner">
+      <a href="#/lokalnie" class="brand" id="site-title">📚 DevOps Basics</a>
+      <nav class="topnav" id="topnav" aria-label="Menu główne"></nav>
+    </div>
+  </div>
+  <header class="hero">
+    <h1 id="page-heading">DevOps Basics</h1>
+    <p id="page-subtitle">Wczytywanie treści…</p>
+  </header>
+  </div>
+  <div class="page-layout" id="page-layout">
+    <aside class="sidebar" id="section-nav-wrapper">
+      <div class="sidebar-heading">SPIS TREŚCI</div>
+      <button class="sidebar-step sidebar-step--up" id="sidebar-step-up" type="button" aria-label="Pokaż wcześniejsze pozycje spisu treści" hidden>▲ Wcześniejsze</button>
+      <nav id="section-nav" aria-label="Sekcje aktualnej zakładki" tabindex="0"></nav>
+      <button class="sidebar-step sidebar-step--down" id="sidebar-step-down" type="button" aria-label="Pokaż dalsze pozycje spisu treści" hidden>▼ Dalsze</button>
+    </aside>
+    <main id="main">
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="section-nav-wrapper">☰ Spis sekcji</button>
+      <div class="toolbar">
+        <label class="sr-only" for="filter">Szukaj w sekcjach, podsekcjach, komendach i opisach</label>
+        <input id="filter" type="search" placeholder="Szukaj komendy lub opisu, np. klon, cache, import-db">
+        <button id="clear-filter" type="button">Pokaż wszystko</button>
+        <button id="print" type="button">Drukuj / PDF</button>
+      </div>
+      <p class="notice" id="notice" hidden></p>
+      <div id="status" role="status" aria-live="polite">Wczytywanie treści…</div>
+      <div id="sections"></div>
+    </main>
+  </div>
+  <footer>DevOps Basics · treść edytowana w plikach JSON · wszystkie dane projektu przechowywane lokalnie</footer>
+</body>
+</html>

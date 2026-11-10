@@ -1,0 +1,10 @@
+dist/
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+.idea/
+.ddev/.ddev-docker-compose-full.yaml
+.ddev/.ddev-docker-compose-base.yaml
+.ddev/.ddev-docker-compose-*.yaml
+.ddev/config.local.yaml

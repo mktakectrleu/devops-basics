@@ -1,0 +1,14 @@
+{
+  "id": "vscode",
+  "title": "DevOps - VS Code",
+  "heading": "Visual Studio Code + WSL2 + Git + DDEV",
+  "subtitle": "Konfiguracja edytora, skróty, terminal, Markdown, JSON, rozszerzenia i diagnostyka",
+  "notice": "VS Code instaluj na Windows, rozszerzenie WSL po stronie VS Code, a kod projektu trzymaj w katalogu Ubuntu (np. ~/projekty/devops-basics). Polecenia oznaczone jako PowerShell wykonuj w Windows, pozostałe w terminalu Ubuntu.",
+  "sections": [
+    "sections/sekcja-01.json",
+    "sections/sekcja-02.json",
+    "sections/sekcja-03.json",
+    "sections/sekcja-04.json",
+    "sections/sekcja-05.json"
+  ]
+}

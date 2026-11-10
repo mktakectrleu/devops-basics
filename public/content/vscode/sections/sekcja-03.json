@@ -1,0 +1,65 @@
+{
+  "id": "vscode-03",
+  "title": "03 · Markdown, JSON i formatowanie",
+  "summary": "Podgląd dokumentacji, kontrola składni i lokalna walidacja.",
+  "subsections": [
+    {
+      "id": "markdown",
+      "title": "Markdown — skróty klawiaturowe",
+      "commands": [
+        {
+          "command": "Ctrl+Shift+V",
+          "description": "Otwiera podgląd bieżącego dokumentu Markdown."
+        },
+        {
+          "command": "Ctrl+K, V",
+          "description": "Otwiera podgląd Markdown obok edytowanego pliku (naciśnij kolejno Ctrl+K i V)."
+        },
+        {
+          "command": "Ctrl+Space",
+          "description": "Wyświetla podpowiedzi i fragmenty składni w edytorze."
+        }
+      ]
+    },
+    {
+      "id": "json",
+      "title": "JSON — sprawdzanie danych",
+      "commands": [
+        {
+          "command": "python3 -m json.tool public/content/site.json",
+          "description": "Sprawdza poprawność składni pliku site.json i wypisuje sformatowane dane."
+        },
+        {
+          "command": "python3 scripts/validate.py",
+          "description": "Sprawdza spójność zakładek, sekcji i opisów komend."
+        },
+        {
+          "command": "python3 -m unittest discover -s tests -v",
+          "description": "Uruchamia testy automatyczne projektu."
+        },
+        {
+          "command": "python3 scripts/build.py",
+          "description": "Tworzy katalog dist/ gotowy do publikacji w GitHub Pages."
+        }
+      ]
+    },
+    {
+      "id": "settings",
+      "title": "Konfiguracja edytora w projekcie",
+      "commands": [
+        {
+          "command": "code .editorconfig",
+          "description": "Otwiera reguły kodowania, wcięć i końców linii."
+        },
+        {
+          "command": "code .vscode/settings.json",
+          "description": "Otwiera ustawienia lokalne projektu VS Code (plik dostarczony w projekcie)."
+        },
+        {
+          "command": "code .vscode/extensions.json",
+          "description": "Otwiera rekomendacje rozszerzeń dla repozytorium."
+        }
+      ]
+    }
+  ]
+}

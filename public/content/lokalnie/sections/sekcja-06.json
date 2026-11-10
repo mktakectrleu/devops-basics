@@ -1,0 +1,45 @@
+{
+  "id": "sekcja-06",
+  "title": "06 · Drupal 11 — istniejące repozytorium",
+  "summary": "Git pobiera kod, a nie bazę ani przesłane pliki. Dla istniejącej witryny dołącz osobno bazę oraz katalog sites/default/files.",
+  "subsections": [
+    {
+      "id": "grupa-01",
+      "title": "Repozytorium → lokalne DDEV",
+      "commands": [
+        {
+          "command": "git clone ADRES_REPOZYTORIUM ~/projekty/drupal11-git",
+          "description": "Klonuje kod istniejącego projektu z Git."
+        },
+        {
+          "command": "cd ~/projekty/drupal11-git",
+          "description": "Przechodzi do sklonowanego projektu."
+        },
+        {
+          "command": "ddev config --project-type=drupal11 --docroot=web --project-name=drupal11-git",
+          "description": "Konfiguruje DDEV, jeśli repozytorium nie ma gotowej konfiguracji; nadaje unikatową nazwę."
+        },
+        {
+          "command": "ddev start",
+          "description": "Uruchamia kontenery."
+        },
+        {
+          "command": "ddev composer install",
+          "description": "Instaluje wersje pakietów zapisane w composer.lock."
+        },
+        {
+          "command": "ddev import-db --file=backup.sql.gz",
+          "description": "Wczytuje kopię istniejącej bazy danych (jeżeli jest dostępna)."
+        },
+        {
+          "command": "ddev drush cr",
+          "description": "Odbudowuje pamięć podręczną Drupala."
+        },
+        {
+          "command": "ddev launch",
+          "description": "Otwiera witrynę po imporcie."
+        }
+      ]
+    }
+  ]
+}

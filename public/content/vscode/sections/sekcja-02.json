@@ -1,0 +1,75 @@
+{
+  "id": "vscode-02",
+  "title": "02 · Edycja i nawigacja",
+  "summary": "Najważniejsze skróty klawiaturowe VS Code oraz praca z treścią.",
+  "subsections": [
+    {
+      "id": "skroty",
+      "title": "Skróty klawiaturowe — Windows",
+      "commands": [
+        {
+          "command": "Ctrl+Shift+P",
+          "description": "Otwiera paletę poleceń; wpisz np. WSL: Connect to WSL."
+        },
+        {
+          "command": "Ctrl+P",
+          "description": "Szybko otwiera plik po nazwie."
+        },
+        {
+          "command": "Ctrl+Shift+F",
+          "description": "Wyszukuje tekst w całym projekcie."
+        },
+        {
+          "command": "Ctrl+Shift+H",
+          "description": "Wyszukuje i zamienia tekst we wszystkich plikach (uważaj na .git)."
+        },
+        {
+          "command": "Ctrl+Shift+E",
+          "description": "Otwiera panel Explorer z drzewem plików."
+        },
+        {
+          "command": "Ctrl+Shift+G",
+          "description": "Otwiera panel Source Control (Git)."
+        },
+        {
+          "command": "Ctrl+`",
+          "description": "Otwiera lub chowa terminal zintegrowany."
+        },
+        {
+          "command": "Ctrl+,",
+          "description": "Otwiera ustawienia edytora."
+        },
+        {
+          "command": "Ctrl+S",
+          "description": "Zapisuje bieżący plik."
+        },
+        {
+          "command": "Ctrl+Shift+X",
+          "description": "Otwiera panel rozszerzeń."
+        }
+      ]
+    },
+    {
+      "id": "pliki",
+      "title": "Przykładowe pliki projektu",
+      "commands": [
+        {
+          "command": "code public/content/site.json",
+          "description": "Otwiera definicję zakładek głównych."
+        },
+        {
+          "command": "code public/content/lokalnie/page.json",
+          "description": "Otwiera metadane strony i listę sekcji."
+        },
+        {
+          "command": "code public/styles.css",
+          "description": "Otwiera arkusz stylów."
+        },
+        {
+          "command": "code public/app.js",
+          "description": "Otwiera logikę dynamicznego ładowania treści."
+        }
+      ]
+    }
+  ]
+}

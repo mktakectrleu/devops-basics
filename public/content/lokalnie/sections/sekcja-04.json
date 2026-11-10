@@ -1,0 +1,59 @@
+{
+  "id": "sekcja-04",
+  "title": "04 · Drupal 7 — istniejąca witryna",
+  "summary": "Umieść pliki strony i kopię bazy w projekcie. docroot=. ma sens tylko, gdy index.php jest w katalogu głównym. PHP 7.4 to wariant zgodności ze starymi projektami — nie dla publicznego serwera.",
+  "subsections": [
+    {
+      "id": "grupa-01",
+      "title": "Konfiguracja / import",
+      "commands": [
+        {
+          "command": "mkdir -p ~/projekty/drupal7",
+          "description": "Tworzy katalog na lokalną kopię Drupala 7."
+        },
+        {
+          "command": "cd ~/projekty/drupal7",
+          "description": "Przechodzi do projektu; wcześniej skopiuj tu pliki witryny."
+        },
+        {
+          "command": "ddev config --project-type=drupal7 --docroot=. --php-version=7.4 --webserver-type=apache-fpm --database=mariadb:10.6",
+          "description": "Ustawia DDEV dla starszej strony (wersje i serwer WWW zweryfikuj dla konkretnej instalacji)."
+        },
+        {
+          "command": "ddev start",
+          "description": "Uruchamia środowisko Drupala 7."
+        },
+        {
+          "command": "ddev import-db --file=backup.sql.gz",
+          "description": "Wczytuje bazę danych z istniejącego zrzutu."
+        },
+        {
+          "command": "ddev launch",
+          "description": "Otwiera lokalną stronę w przeglądarce."
+        }
+      ]
+    },
+    {
+      "id": "grupa-02",
+      "title": "Drush — wariant legacy",
+      "commands": [
+        {
+          "command": "ddev drush status",
+          "description": "Sprawdza, czy Drush widzi witrynę, bazę i wersję Drupala."
+        },
+        {
+          "command": "ddev drush cc all",
+          "description": "Czyści wszystkie cache w Drush dla Drupal 7 (starsza składnia)."
+        },
+        {
+          "command": "ddev drush pm-list",
+          "description": "Wyświetla listę modułów i ich status."
+        },
+        {
+          "command": "ddev drush updatedb",
+          "description": "Uruchamia aktualizacje schematu bazy; wykonuj po backupie."
+        }
+      ]
+    }
+  ]
+}

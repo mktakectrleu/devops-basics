@@ -1,0 +1,55 @@
+{
+  "id": "sekcja-01",
+  "title": "01 · Architektura i zasady",
+  "summary": "Windows 11 → WSL2 / Ubuntu → Docker Engine + Docker Compose → DDEV → kontenery WWW/PHP/DB. Polecenia DDEV wykonuj w Ubuntu. Projekty trzymaj w ~/projekty (nie w /mnt/c).",
+  "subsections": [
+    {
+      "id": "grupa-01",
+      "title": "PowerShell / Windows",
+      "commands": [
+        {
+          "command": "wsl --list --verbose",
+          "description": "Wyświetla dystrybucje WSL i wersję WSL każdej z nich."
+        },
+        {
+          "command": "wsl --update",
+          "description": "Aktualizuje komponenty WSL."
+        },
+        {
+          "command": "wsl --shutdown",
+          "description": "Zatrzymuje wszystkie dystrybucje WSL; przydatne przy restarcie środowiska."
+        }
+      ]
+    },
+    {
+      "id": "grupa-02",
+      "title": "Ubuntu / Docker",
+      "commands": [
+        {
+          "command": "sudo apt update",
+          "description": "Odświeża listę dostępnych pakietów Ubuntu."
+        },
+        {
+          "command": "sudo apt upgrade -y",
+          "description": "Instaluje dostępne aktualizacje pakietów systemowych."
+        },
+        {
+          "command": "docker --version",
+          "description": "Sprawdza wersję Docker Engine/CLI."
+        },
+        {
+          "command": "docker compose version",
+          "description": "Sprawdza wersję dodatku Docker Compose."
+        },
+        {
+          "command": "sudo systemctl status docker",
+          "description": "Sprawdza, czy usługa Docker działa (gdy Ubuntu korzysta z systemd)."
+        },
+        {
+          "command": "docker ps",
+          "description": "Pokazuje uruchomione kontenery."
+        }
+      ]
+    }
+  ]
+}

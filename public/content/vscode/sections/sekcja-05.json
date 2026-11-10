@@ -1,0 +1,51 @@
+{
+  "id": "vscode-05",
+  "title": "05 · Rozszerzenia i typowe problemy",
+  "summary": "Integracja WSL, GitHub Copilot i rozwiązywanie kłopotów z CLI.",
+  "subsections": [
+    {
+      "id": "rozszerzenia",
+      "title": "Rozszerzenia — instalacja opcjonalna",
+      "commands": [
+        {
+          "command": "code --install-extension ms-python.python",
+          "description": "Instaluje rozszerzenie Python (przydatne do skryptów walidacji)."
+        },
+        {
+          "command": "code --install-extension davidanson.vscode-markdownlint",
+          "description": "Instaluje narzędzie kontroli stylu dokumentów Markdown."
+        },
+        {
+          "command": "code --install-extension github.copilot",
+          "description": "Instaluje oficjalne rozszerzenie GitHub Copilot; usługa wymaga konta i ma limity zależne od planu."
+        }
+      ]
+    },
+    {
+      "id": "naprawa",
+      "title": "Diagnostyka WSL i VS Code Server",
+      "commands": [
+        {
+          "command": "echo \"$PATH\"",
+          "description": "Wyświetla ścieżki, w których Ubuntu szuka polecenia code."
+        },
+        {
+          "command": "command -v code || echo \"Brak polecenia code w PATH\"",
+          "description": "Sprawdza dostępność code, a gdy go nie ma, pokazuje komunikat."
+        },
+        {
+          "command": "ls -la ~/.vscode-server",
+          "description": "Wyświetla katalog komponentu VS Code Server, jeśli już został zainstalowany."
+        },
+        {
+          "command": "sudo apt-get update",
+          "description": "Aktualizuje listę pakietów Ubuntu."
+        },
+        {
+          "command": "sudo apt-get install -y wget ca-certificates",
+          "description": "Instaluje typowe zależności wymagane do pobierania i weryfikacji plików VS Code Server."
+        }
+      ]
+    }
+  ]
+}

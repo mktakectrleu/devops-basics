@@ -1,0 +1,45 @@
+{
+  "id": "github-04",
+  "title": "04 · Rozwiązywanie problemów",
+  "summary": "Publikacja następuje po zielonym workflow i ustawieniu GitHub Pages na GitHub Actions.",
+  "subsections": [
+    {
+      "id": "diagnostyka",
+      "title": "Testy i diagnostyka",
+      "commands": [
+        {
+          "command": "python3 -m unittest discover -s tests -v",
+          "description": "Uruchamia testy projektu lokalnie."
+        },
+        {
+          "command": "python3 -m http.server 8000 --directory public",
+          "description": "Uruchamia alternatywny serwer statyczny bez DDEV."
+        },
+        {
+          "command": "ddev start",
+          "description": "Uruchamia witrynę lokalnie pod adresem DDEV."
+        },
+        {
+          "command": "ddev launch",
+          "description": "Otwiera stronę w przeglądarce."
+        },
+        {
+          "command": "git remote -v",
+          "description": "Pokazuje URL repozytorium zdalnego."
+        },
+        {
+          "command": "git branch -vv",
+          "description": "Pokazuje gałęzie i ich powiązania ze zdalnym repozytorium."
+        },
+        {
+          "command": "gh run list --limit 5",
+          "description": "Pokazuje ostatnie uruchomienia GitHub Actions (wymaga gh)."
+        },
+        {
+          "command": "gh run watch",
+          "description": "Śledzi działanie bieżącego workflow (wymaga gh)."
+        }
+      ]
+    }
+  ]
+}

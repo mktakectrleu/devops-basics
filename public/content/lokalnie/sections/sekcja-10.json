@@ -1,0 +1,41 @@
+{
+  "id": "sekcja-10",
+  "title": "10 · Diagnostyka i typowe problemy",
+  "summary": "Błąd ASCII NUL przy imporcie często oznacza nieprawidłowy format lub próbę potraktowania gzip jako zwykłego SQL. Błędy Drupal 7 pod PHP 8.2 testuj na osobnym klonie.",
+  "subsections": [
+    {
+      "id": "grupa-01",
+      "title": "Diagnostyka / uprawnienia",
+      "commands": [
+        {
+          "command": "ddev logs -s web",
+          "description": "Przegląda logi web/PHP przy błędach 500 lub białym ekranie."
+        },
+        {
+          "command": "ddev exec php -l index.php",
+          "description": "Sprawdza składnię pliku PHP (dla Drupala z index.php w docroot dopasuj ścieżkę)."
+        },
+        {
+          "command": "ddev drush status",
+          "description": "Sprawdza dostęp Drush do witryny."
+        },
+        {
+          "command": "ddev drush watchdog:show",
+          "description": "Pokazuje ostatnie wpisy dziennika Drupala, gdy komenda jest dostępna."
+        },
+        {
+          "command": "file backup.sql.gz",
+          "description": "Sprawdza format zrzutu przed importem."
+        },
+        {
+          "command": "chmod 700 ~/.ssh",
+          "description": "Ogranicza dostęp do katalogu kluczy SSH."
+        },
+        {
+          "command": "chmod 600 ~/.ssh/id_rsa",
+          "description": "Zabezpiecza prywatny klucz SSH przed odczytem przez innych użytkowników."
+        }
+      ]
+    }
+  ]
+}

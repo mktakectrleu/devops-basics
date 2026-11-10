@@ -1,0 +1,73 @@
+{
+  "id": "vscode-01",
+  "title": "01 · Instalacja i integracja z WSL2",
+  "summary": "VS Code na Windows + rozszerzenie WSL; otwieranie projektów Ubuntu.",
+  "subsections": [
+    {
+      "id": "windows",
+      "title": "Windows / PowerShell — przygotowanie",
+      "commands": [
+        {
+          "command": "wsl --status",
+          "description": "PowerShell: sprawdza stan WSL i domyślną dystrybucję."
+        },
+        {
+          "command": "wsl --list --verbose",
+          "description": "PowerShell: pokazuje dystrybucje Linux i ich wersję WSL."
+        },
+        {
+          "command": "wsl --shutdown",
+          "description": "PowerShell: zatrzymuje wszystkie dystrybucje WSL; przydatne po zmianach integracji."
+        },
+        {
+          "command": "winget install --id Microsoft.VisualStudioCode -e",
+          "description": "PowerShell: instaluje oficjalny VS Code na Windows za pomocą winget (jeśli nie jest zainstalowany)."
+        }
+      ]
+    },
+    {
+      "id": "ubuntu",
+      "title": "Ubuntu / WSL — uruchamianie edytora",
+      "commands": [
+        {
+          "command": "cd ~/projekty/devops-basics",
+          "description": "Przechodzi do folderu projektu w systemie plików Ubuntu."
+        },
+        {
+          "command": "code .",
+          "description": "Otwiera bieżący katalog w VS Code z połączeniem WSL; przy pierwszym uruchomieniu instaluje VS Code Server."
+        },
+        {
+          "command": "code README.md",
+          "description": "Otwiera wskazany plik Markdown w VS Code."
+        },
+        {
+          "command": "command -v code",
+          "description": "Sprawdza, czy polecenie code jest dostępne w bieżącej powłoce."
+        },
+        {
+          "command": "code --version",
+          "description": "Wyświetla wersję uruchamianego VS Code."
+        },
+        {
+          "command": "pwd",
+          "description": "Pokazuje katalog, z którego otwarto projekt."
+        }
+      ]
+    },
+    {
+      "id": "wsl-extension",
+      "title": "Rozszerzenie WSL — bez klikania",
+      "commands": [
+        {
+          "command": "code --install-extension ms-vscode-remote.remote-wsl",
+          "description": "Instaluje oficjalne rozszerzenie WSL, gdy code CLI jest już dostępne."
+        },
+        {
+          "command": "code --list-extensions",
+          "description": "Pokazuje rozszerzenia dostępne w aktualnym kontekście VS Code."
+        }
+      ]
+    }
+  ]
+}

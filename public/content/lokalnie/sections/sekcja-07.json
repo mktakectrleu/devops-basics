@@ -1,0 +1,67 @@
+{
+  "id": "sekcja-07",
+  "title": "07 · Composer i Drush — Drupal 11",
+  "summary": "Composer pobiera pakiety, Drush administruje Drupalem. Operacje na bazie i konfiguracji rób po backupie.",
+  "subsections": [
+    {
+      "id": "grupa-01",
+      "title": "Zależności / moduły",
+      "commands": [
+        {
+          "command": "ddev composer --version",
+          "description": "Sprawdza wersję Composera w środowisku DDEV."
+        },
+        {
+          "command": "ddev drush --version",
+          "description": "Sprawdza wersję Drush w projekcie."
+        },
+        {
+          "command": "ddev composer require drupal/pathauto",
+          "description": "Pobiera moduł Pathauto jako zależność projektu."
+        },
+        {
+          "command": "ddev drush en pathauto -y",
+          "description": "Włącza zainstalowany moduł Pathauto."
+        },
+        {
+          "command": "ddev drush status",
+          "description": "Pokazuje informacje o uruchomionej witrynie."
+        },
+        {
+          "command": "ddev drush cr",
+          "description": "Przebudowuje cache Drupala 11."
+        },
+        {
+          "command": "ddev drush updb -y",
+          "description": "Wykonuje oczekujące aktualizacje bazy."
+        },
+        {
+          "command": "ddev drush cex -y",
+          "description": "Eksportuje aktywną konfigurację do plików."
+        },
+        {
+          "command": "ddev drush cim -y",
+          "description": "Importuje konfigurację z plików do aktywnej witryny."
+        }
+      ]
+    },
+    {
+      "id": "grupa-02",
+      "title": "Aktualizacja rdzenia",
+      "commands": [
+        {
+          "command": "ddev composer update \"drupal/core-*\" --with-all-dependencies",
+          "description": "Aktualizuje komponenty rdzenia w granicach dopuszczonych przez composer.json; sprawdź zmiany i zrób backup."
+        },
+        {
+          "command": "ddev drush updb -y",
+          "description": "Dostosowuje strukturę bazy po aktualizacji kodu."
+        },
+        {
+          "command": "ddev drush cr",
+          "description": "Czyści i przebudowuje cache po aktualizacji."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "id": "sekcja-05",
+  "title": "05 · Drupal 11 — nowy projekt",
+  "summary": "Nowy Drupal 11 używa Composera; PHP 8.3 to przykład, sprawdź wymagania wydań i modułów. Hasła testowe nie powinny trafiać do repozytorium.",
+  "subsections": [
+    {
+      "id": "grupa-01",
+      "title": "Tworzenie i instalacja",
+      "commands": [
+        {
+          "command": "mkdir -p ~/projekty/drupal11",
+          "description": "Tworzy katalog nowego projektu."
+        },
+        {
+          "command": "cd ~/projekty/drupal11",
+          "description": "Ustawia katalog roboczy."
+        },
+        {
+          "command": "ddev config --project-type=drupal11 --docroot=web --php-version=8.3",
+          "description": "Konfiguruje projekt Drupal 11 z katalogiem publicznym web/."
+        },
+        {
+          "command": "ddev start",
+          "description": "Uruchamia usługi DDEV."
+        },
+        {
+          "command": "ddev composer create-project \"drupal/recommended-project:^11\"",
+          "description": "Pobiera szkielet Drupala 11 wraz z zależnościami Composer."
+        },
+        {
+          "command": "ddev composer require drush/drush",
+          "description": "Dodaje Drush do projektu jako zależność."
+        },
+        {
+          "command": "ddev drush site:install --account-name=admin -y",
+          "description": "Instaluje stronę; hasło administratora ustaw/potwierdź bezpiecznie po instalacji."
+        },
+        {
+          "command": "ddev drush user:password admin \"NOWE_SILNE_HASLO\"",
+          "description": "Ustawia hasło administratora (zamień tekst; polecenie zapisuje hasło w historii terminala)."
+        },
+        {
+          "command": "ddev launch",
+          "description": "Otwiera zainstalowaną witrynę."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "id": "vscode-04",
+  "title": "04 · Terminal, Git i DDEV",
+  "summary": "Codzienna praca bez opuszczania edytora.",
+  "subsections": [
+    {
+      "id": "ddev",
+      "title": "DDEV z terminala VS Code w WSL",
+      "commands": [
+        {
+          "command": "ddev start",
+          "description": "Uruchamia lokalny serwer projektu."
+        },
+        {
+          "command": "ddev launch",
+          "description": "Otwiera lokalną stronę w przeglądarce."
+        },
+        {
+          "command": "ddev describe",
+          "description": "Wyświetla szczegóły konfiguracji DDEV."
+        },
+        {
+          "command": "ddev logs",
+          "description": "Pokazuje logi uruchomionego projektu."
+        },
+        {
+          "command": "ddev stop",
+          "description": "Zatrzymuje środowisko projektu."
+        }
+      ]
+    },
+    {
+      "id": "git",
+      "title": "Git i publikacja",
+      "commands": [
+        {
+          "command": "git status",
+          "description": "Pokazuje zmodyfikowane pliki projektu."
+        },
+        {
+          "command": "git diff",
+          "description": "Wyświetla niezapisane w commicie różnice w plikach."
+        },
+        {
+          "command": "git add .",
+          "description": "Dodaje zmiany do kolejnego commita; wcześniej przejrzyj git status."
+        },
+        {
+          "command": "git commit -m \"Aktualizacja dokumentacji VS Code\"",
+          "description": "Zapisuje zmiany w lokalnej historii Git."
+        },
+        {
+          "command": "git pull --ff-only",
+          "description": "Pobiera nowe commity ze zdalnego repozytorium bez automatycznego merge."
+        },
+        {
+          "command": "git push",
+          "description": "Wysyła commity do GitHub; push na main uruchamia publikację Pages."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "id": "github-02",
+  "title": "02 · Pierwsza publikacja projektu",
+  "summary": "Przygotuj repozytorium, wyślij kod do gałęzi main i ustaw GitHub Pages: Source = GitHub Actions.",
+  "subsections": [
+    {
+      "id": "inicjalizacja",
+      "title": "Repozytorium lokalne",
+      "commands": [
+        {
+          "command": "cd ~/projekty/devops-basics",
+          "description": "Przechodzi do projektu w WSL2."
+        },
+        {
+          "command": "git init -b main",
+          "description": "Tworzy repozytorium Git i ustawia gałąź main."
+        },
+        {
+          "command": "git add .",
+          "description": "Dodaje wszystkie nieignorowane pliki do commita."
+        },
+        {
+          "command": "git commit -m \"Start projektu DevOps Ściąga\"",
+          "description": "Zapisuje pierwszą wersję projektu."
+        },
+        {
+          "command": "git remote add origin https://github.com/NAZWA_UZYTKOWNIKA/devops-basics.git",
+          "description": "Łączy z repozytorium GitHub, które wcześniej utworzono jako PUSTE (bez README)."
+        },
+        {
+          "command": "git push -u origin main",
+          "description": "Wysyła main i ustawia śledzenie gałęzi zdalnej."
+        }
+      ]
+    },
+    {
+      "id": "deploy",
+      "title": "Automatyczne wdrażanie",
+      "commands": [
+        {
+          "command": "python3 scripts/validate.py",
+          "description": "Sprawdza składnię JSON, strukturę treści i wymagane pliki."
+        },
+        {
+          "command": "python3 scripts/build.py",
+          "description": "Tworzy katalog dist/ zawierający tylko publiczne pliki witryny."
+        },
+        {
+          "command": "git push",
+          "description": "Uruchamia na GitHub testy i automatyczną publikację po zmianach w main."
+        }
+      ]
+    }
+  ]
+}

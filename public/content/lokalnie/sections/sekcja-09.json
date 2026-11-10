@@ -1,0 +1,67 @@
+{
+  "id": "sekcja-09",
+  "title": "09 · Klon lokalny projektu — kod + baza + pliki",
+  "summary": "Przykład kopii drupal11 → drupal11-test. Najpierw wyeksportuj bazę do katalogu poza źródłem. Skopiuj projekt razem z .ddev oraz sites/default/files. W kopii nadaj INNĄ nazwę DDEV; bez tego projekty będą kolidować. Dotyczy też Drupal 7 — dopasuj ścieżkę i nazwę.",
+  "subsections": [
+    {
+      "id": "grupa-01",
+      "title": "Krok A — źródło",
+      "commands": [
+        {
+          "command": "mkdir -p ~/projekty/backups",
+          "description": "Tworzy wspólny katalog kopii bazy poza kopiowanym projektem."
+        },
+        {
+          "command": "cd ~/projekty/drupal11",
+          "description": "Przechodzi do projektu źródłowego."
+        },
+        {
+          "command": "ddev export-db --file=~/projekty/backups/drupal11.sql.gz",
+          "description": "Zapisuje bazę projektu źródłowego poza jego katalogiem."
+        },
+        {
+          "command": "ddev stop",
+          "description": "Zatrzymuje źródło na czas kopiowania plików (zmniejsza ryzyko zmian w trakcie)."
+        }
+      ]
+    },
+    {
+      "id": "grupa-02",
+      "title": "Krok B — skopiuj i skonfiguruj",
+      "commands": [
+        {
+          "command": "rsync -a --exclude=\".ddev/db_snapshots/\" ~/projekty/drupal11/ ~/projekty/drupal11-test/",
+          "description": "Tworzy pełną kopię plików i ukrytej konfiguracji .ddev; pomija ciężkie snapshoty."
+        },
+        {
+          "command": "cd ~/projekty/drupal11-test",
+          "description": "Przechodzi do nowej kopii."
+        },
+        {
+          "command": "ddev config --project-name=drupal11-test",
+          "description": "Nadaje unikatową nazwę projektu DDEV, aby klon nie zastąpił źródła."
+        },
+        {
+          "command": "ddev start",
+          "description": "Uruchamia osobne kontenery dla klonu."
+        },
+        {
+          "command": "ddev import-db --file=~/projekty/backups/drupal11.sql.gz",
+          "description": "Odtwarza bazę z projektu źródłowego w klonie."
+        },
+        {
+          "command": "ddev drush cr",
+          "description": "Przebudowuje cache, gdy klon to Drupal 11."
+        },
+        {
+          "command": "ddev launch",
+          "description": "Otwiera sklonowaną stronę; sprawdź adres oraz pliki użytkowników."
+        },
+        {
+          "command": "cd ~/projekty/drupal11 && ddev start",
+          "description": "Opcjonalnie ponownie uruchamia projekt źródłowy."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "id": "sekcja-08",
+  "title": "08 · Backup bazy i plików",
+  "summary": "Eksport bazy to tylko część backupu. Zachowaj także kod, pliki użytkowników i konfigurację .ddev.",
+  "subsections": [
+    {
+      "id": "grupa-01",
+      "title": "Backup / odtwarzanie",
+      "commands": [
+        {
+          "command": "ddev export-db --file=backup.sql.gz",
+          "description": "Zapisuje skompresowany zrzut bazy do pliku."
+        },
+        {
+          "command": "ddev import-db --file=backup.sql.gz",
+          "description": "Przywraca bazę z pliku; nadpisuje dane bieżącej bazy."
+        },
+        {
+          "command": "ddev snapshot",
+          "description": "Tworzy lokalny snapshot bazy danych DDEV."
+        },
+        {
+          "command": "ddev snapshot --list",
+          "description": "Wyświetla dostępne snapshoty bazy."
+        },
+        {
+          "command": "ddev snapshot restore --latest",
+          "description": "Przywraca ostatni snapshot bazy; zastępuje bieżące dane."
+        },
+        {
+          "command": "ddev stop --unlist",
+          "description": "Zatrzymuje projekt i usuwa go z listy aktywnie zarządzanych, bez kasowania katalogu."
+        }
+      ]
+    }
+  ]
+}

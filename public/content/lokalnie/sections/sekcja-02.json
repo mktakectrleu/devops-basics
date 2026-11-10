@@ -1,0 +1,53 @@
+{
+  "id": "sekcja-02",
+  "title": "02 · Linux — pliki i terminal",
+  "summary": "Tab uzupełnia nazwy; Ctrl+C przerywa polecenie; Ctrl+L czyści widok terminala. Uwaga: ścieżki i nazwy to przykłady.",
+  "subsections": [
+    {
+      "id": "grupa-01",
+      "title": "Ubuntu",
+      "commands": [
+        {
+          "command": "pwd",
+          "description": "Pokazuje bieżący katalog."
+        },
+        {
+          "command": "ls -la",
+          "description": "Wyświetla pliki, w tym ukryte, oraz uprawnienia."
+        },
+        {
+          "command": "cd ~/projekty",
+          "description": "Przechodzi do katalogu projektów."
+        },
+        {
+          "command": "cd ..",
+          "description": "Przechodzi do katalogu nadrzędnego."
+        },
+        {
+          "command": "mkdir -p ~/projekty",
+          "description": "Tworzy katalog, jeśli jeszcze nie istnieje."
+        },
+        {
+          "command": "cp -a zrodlo/ kopia/",
+          "description": "Kopiuje katalog i zachowuje metadane; przy istniejącym celu sprawdź wynikową strukturę."
+        },
+        {
+          "command": "mv stara_nazwa nowa_nazwa",
+          "description": "Przenosi lub zmienia nazwę pliku/katalogu."
+        },
+        {
+          "command": "tar -tzf backup.tar.gz",
+          "description": "Wyświetla zawartość archiwum bez rozpakowania."
+        },
+        {
+          "command": "tar -xzf backup.tar.gz",
+          "description": "Rozpakowuje archiwum do bieżącego katalogu."
+        },
+        {
+          "command": "file backup.sql.gz",
+          "description": "Rozpoznaje faktyczny format pliku (np. gzip zamiast tekstowego SQL)."
+        }
+      ]
+    }
+  ]
+}
