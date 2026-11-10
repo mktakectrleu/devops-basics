@@ -24,7 +24,7 @@ class ProjectTests(unittest.TestCase):
         self.assertIn('vscode', [page['id'] for page in site['pages']])
 
     def test_local_tab_preserved(self):
-        page = read_json('content/lokalnie/page.json')
+        page = read_json('content/local/page.json')
         self.assertEqual(len(page['sections']), 10)
 
 
