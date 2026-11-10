@@ -158,4 +158,4 @@ refs.toggle.addEventListener('click',()=>{const expanded=refs.layout.classList.t
 refs.side.addEventListener('click',e=>{if(e.target.closest('a')){refs.layout.classList.remove('nav-open');refs.toggle.setAttribute('aria-expanded','false');}});
 window.addEventListener('scroll',()=>{if(sectionNodes.length)updateActiveSide();},{passive:true});
 window.addEventListener('hashchange',navigate);
-(async()=>{try{site=await loadJson('content/site.json');refs.title.textContent='📚 '+site.title;await navigate();}catch(error){console.error(error);setStatus('Nie można wczytać content/site.json. Otwórz stronę przez lokalny serwer HTTP, np. python3 -m http.server 8000. Szczegóły: '+error.message,true);}})();
+(async()=>{try{site=await loadJson('content/site.json');refs.title.textContent=site.title;await navigate();}catch(error){console.error(error);setStatus('Nie można wczytać content/site.json. Otwórz stronę przez lokalny serwer HTTP, np. python3 -m http.server 8000. Szczegóły: '+error.message,true);}})();
